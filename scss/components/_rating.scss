@@ -1,0 +1,38 @@
+$rating-clr-bg: $clr-primary-lighter;
+$rating-border-r: $border-r;
+$rating-rated-font-weight: $font-bold;
+$rating-rated-font-clr: $clr-primary;
+
+.rating {
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $rating-clr-bg;
+  border-radius: $rating-border-r;
+
+  @include respond-to(lg) {
+    padding: 1.5em 5.5em 1.5em 2.5em;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__stars {
+    min-width: 110px;
+  }
+
+  &__rated-in {
+    font-size: 0.9rem;
+    font-weight: $rating-rated-font-weight;
+    text-transform: capitalize;
+    color: $rating-rated-font-clr;
+    margin-top: 0.5em;
+
+    @include respond-to(lg) {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-left: 2em;
+    }
+  }
+}

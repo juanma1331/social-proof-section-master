@@ -1,0 +1,45 @@
+// Simple Flex Grid System
+.new-container {
+  width: 100%;
+  display: block;
+  max-width: $container-max-width;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Columns
+@for $i from 1 through $grid-num-columns {
+  // col-1
+  .col-#{$i} {
+    flex: 0 0 100% / $grid-num-columns * $i;
+  }
+  // col-offset-1
+  .col-offset-#{$i} {
+    margin-left: (100% * $i) / $grid-num-columns;
+  }
+}
+
+// Responsive Columns
+@each $bp-name, $value in $breakpoints {
+  @for $i from 1 through $grid-num-columns {
+    // col-md-1
+    .col-#{$bp-name}-#{$i} {
+      @include respond-to($bp-name) {
+        flex: 0 0 100% / $grid-num-columns * $i;
+      }
+    }
+    // col-md-offset-1
+    .col-#{$bp-name}-offset-#{$i} {
+      @include respond-to($bp-name) {
+        margin-left: (100% * $i) / $grid-num-columns;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.review {
+  $review-bg-clr: $clr-primary;
+  $review-borer-r: $border-r;
+  $review-base-text-clr: $clr-primary-lighter;
+  $review-user-name-weigth: $font-bold;
+  $review-status-clr: $clr-accent;
+  $review-font-size: 0.9rem;
+  $review-text-transform: capitalize;
+
+  background-color: $review-bg-clr;
+  padding: 2em;
+  text-align: left;
+  border-radius: $review-borer-r;
+
+  &__head {
+    display: flex;
+  }
+
+  &__user-avatar {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+  }
+
+  &__details {
+    margin-left: 1.8em;
+  }
+
+  &__user-name {
+    color: $review-base-text-clr;
+    font-size: $review-font-size;
+    font-weight: $review-user-name-weigth;
+    text-transform: $review-text-transform;
+  }
+
+  &__status {
+    color: $review-status-clr;
+    font-size: $review-font-size;
+    line-height: 2;
+    text-transform: $review-text-transform;
+  }
+
+  &__user-review {
+    margin-top: 1.4em;
+    color: $review-base-text-clr;
+    font-size: 0.9rem;
+    text-align: left;
+    line-height: 1.8;
+  }
+}

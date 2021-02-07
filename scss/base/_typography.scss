@@ -1,0 +1,38 @@
+// Size
+.txt-lg {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  // If not set, the letter F could not be seen correctl
+
+  @include respond-to(lg) {
+    font-size: 3.5rem;
+  }
+}
+
+.txt-sm {
+  font-size: 0.92rem;
+  line-height: 1.8;
+
+  @include respond-to(lg) {
+    font-size: 1.2rem;
+  }
+}
+
+// Color
+.txt-primary {
+  color: $clr-primary;
+}
+
+.txt-primary-light {
+  color: $clr-primary-light;
+}
+
+// Alignment
+.txt-center {
+  text-align: center;
+}
+.txt-lg-left {
+  @include respond-to(lg) {
+    text-align: left;
+  }
+}

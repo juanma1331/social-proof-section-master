@@ -1,0 +1,60 @@
+.lg-translateX-2 {
+  @include respond-to(lg) {
+    transform: translateX(-4em);
+  }
+}
+
+.lg-translateX-4 {
+  @include respond-to(lg) {
+    transform: translateX(-8em);
+  }
+}
+
+.lg-translateY-1 {
+  @include respond-to(lg) {
+    transform: translateY(1.5em);
+  }
+}
+
+.lg-translateY-2 {
+  @include respond-to(lg) {
+    transform: translateY(3em);
+  }
+}
+
+// Margin
+.mb-1 {
+  margin-bottom: 2em;
+}
+.mb-2 {
+  margin-bottom: 4em;
+}
+.mt-3 {
+  margin-top: 2em;
+}
+.mb-lg-0 {
+  @include respond-to(lg) {
+    margin-bottom: 0;
+  }
+}
+
+// Padding
+.pt-1 {
+  padding-top: 4em;
+}
+.px-lg-1 {
+  @include respond-to(lg) {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+.pt-lg-1 {
+  @include respond-to(lg) {
+    padding-top: 8em;
+  }
+}
+
+// Gap
+.gap-1 {
+  gap: 0.5em;
+}
